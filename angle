@@ -1,4 +1,4 @@
-public class Point {https://github.com/josehp5/java102
+public class Point {
     public final double x;
     public final double y;
 
@@ -16,3 +16,4 @@ public class Point {https://github.com/josehp5/java102
         }
 
         return angledegrees;
+}
