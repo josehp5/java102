@@ -1,0 +1,24 @@
+public class Point {
+    double x;
+    double y;
+
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public static Point centerofmass(Point[] points) {
+        double totalX = 0;
+        double totalY = 0;
+        
+        for (Point point : points) {
+            totalX += point.x;
+            totalY += point.y;
+        }
+        
+        double avgX = totalX / points.length;
+        double avgY = totalY / points.length;
+        
+        return new Point(avgX, avgY);
+    }
+}
