@@ -1,0 +1,7 @@
+public arraylist<T> diagonal() {
+    arraylist<T> diagonal = new arraylist<>();
+    for (int i = 0; i < sidelength; i++) {
+        diagonal.add(grid.get(i).get(i)); 
+    }
+    return diagonal;
+}
