@@ -1,0 +1,13 @@
+  public static int MaxSideLength(int a) {
+        int count = 0;
+        for (int i : a) {
+            System.out.print(i + " "); 
+            count++;
+           
+            if (i > maxSideLength) {
+                maxSideLength = i;
+            }
+        }
+        return maxSideLength;
+    }
+}
