@@ -1,0 +1,50 @@
+public class RightTriangle implements Shape {
+    private final Point corner;
+    private final double base;
+    private final double height;
+
+    public RightTriangle(Point corner, double base, double height) {
+        this.corner = corner;
+        this.base = base;
+        this.height = height;
+    }
+    @Override
+    public double area() {
+        return 0.5 * base * height;
+    }
+    @Override
+    public double perimeter() {
+        double hypotenuse = Math.sqrt(base * base + height * height);
+        return base + height + hypotenuse;
+    }
+    @Override
+    public boolean isInside(Point p) {
+        return false; 
+    }
+
+    @Override
+    public boolean isOn(Point p) {
+        return false; 
+    }
+    @Override
+    public Shape translate(double x, double y) {
+        return new RightTriangle(corner.translate(x, y), base, height);
+    }
+    @Override
+    public Shape scale(double k) {
+        return new RightTriangle(corner, base * k, height * k);
+    }
+    @Override
+    public String toString() {
+        return "RightTriangle{" +
+                "corner=" + corner +
+                ", base=" + base +
+                ", height=" + height +
+                '}';
+    }
+    public static boolean similar(RightTriangle triangle1, RightTriangle triangle2) {
+        double ratio1 = triangle1.base / triangle2.base;
+        double ratio2 = triangle1.height / triangle2.height;
+        return Math.abs(ratio1 - ratio2) < 1e-10; 
+    }
+}
