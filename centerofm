@@ -8,17 +8,17 @@ public class Point {
     }
 
     public static Point centerofmass(Point[] points) {
-        double totalX = 0;
-        double totalY = 0;
+        double totalx = 0;
+        double totaly = 0;
         
         for (Point point : points) {
-            totalX += point.x;
-            totalY += point.y;
+            totalx += point.x;
+            totaly += point.y;
         }
         
-        double avgX = totalX / points.length;
-        double avgY = totalY / points.length;
+        double averagex = totalx / points.length;
+        double averagey = totaly / points.length;
         
-        return new Point(avgX, avgY);
+        return new Point(averagex, averagey);
     }
 }
