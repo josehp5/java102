@@ -1,0 +1,3 @@
+public static ArrayList<LibraryItem> availableItems(LibraryItem[] items) {
+    ArrayList<LibraryItem> availableItems = new ArrayList<>();
+    
