@@ -11,9 +11,6 @@ public class Point {
         double angleradians = Math.atan2(y, x);
         double angledegrees = Math.todegrees(angleradians);
     }
-        if (angledegrees < 0) {
-            angledegrees += 360;
-        }
 
         return angledegrees;
 }
