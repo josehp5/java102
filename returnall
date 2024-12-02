@@ -1,0 +1,18 @@
+public class LibraryItem {
+    protected String name;
+
+    public LibraryItem(String name) {
+        this.name = name;
+    }
+    public void returning() {
+        System.out.println(name + " was returned.");
+    }
+}
+public class Book extends LibraryItem {
+    public Book(String name) {
+        super(name);
+    }
+}
+public static void returnAll(LibraryItem[] items) {
+    for (LibraryItem item : items) {
+        item.returning();
