@@ -1,9 +1,9 @@
-public class RightTriangle implements Shape {
+public class righttriangle implements Shape {
     private final Point corner;
     private final double base;
     private final double height;
 
-    public RightTriangle(Point corner, double base, double height) {
+    public righttriangle(Point corner, double base, double height) {
         this.corner = corner;
         this.base = base;
         this.height = height;
@@ -18,31 +18,31 @@ public class RightTriangle implements Shape {
         return base + height + hypotenuse;
     }
     @Override
-    public boolean isInside(Point p) {
+    public boolean isinside(Point p) {
         return false; 
     }
 
     @Override
-    public boolean isOn(Point p) {
+    public boolean ison(Point p) {
         return false; 
     }
     @Override
     public Shape translate(double x, double y) {
-        return new RightTriangle(corner.translate(x, y), base, height);
+        return new righttriangle(corner.translate(x, y), base, height);
     }
     @Override
     public Shape scale(double k) {
-        return new RightTriangle(corner, base * k, height * k);
+        return new righttriangle(corner, base * k, height * k);
     }
     @Override
     public String toString() {
-        return "RightTriangle{" +
+        return "righttriangle{" +
                 "corner=" + corner +
                 ", base=" + base +
                 ", height=" + height +
                 '}';
     }
-    public static boolean similar(RightTriangle triangle1, RightTriangle triangle2) {
+    public static boolean similar(righttriangle triangle1, righttriangle triangle2) {
         double ratio1 = triangle1.base / triangle2.base;
         double ratio2 = triangle1.height / triangle2.height;
         return Math.abs(ratio1 - ratio2)
