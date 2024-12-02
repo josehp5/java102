@@ -1,1 +1,23 @@
+public class Point {
+    private int x, y;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public Point rotate() {
+        return new Point(-this.y, this.x);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void display() {
+        System.out.println("Point(" + x + ", " + y + ")");
+    }
 
