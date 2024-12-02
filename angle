@@ -10,7 +10,6 @@ public class Point {
     public double angle() {
         double angleradians = Math.atan2(y, x);
         double angledegrees = Math.todegrees(angleradians);
-    }
-
         return angledegrees;
+    }
 }
