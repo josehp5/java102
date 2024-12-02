@@ -1,0 +1,20 @@
+public static Circle fromPoints(Point p1, Point p2, Point p3) {
+    Point mid1 = new Point((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+    Point mid2 = new Point((p2.x + p3.x) / 2, (p2.y + p3.y) / 2);
+
+    double slope1 = (p2.y - p1.y) / (p2.x - p1.x);
+    double slope2 = (p3.y - p2.y) / (p3.x - p2.x);
+  
+    double perpSlope1 = -1 / slope1;
+    double perpSlope2 = -1 / slope2;
+
+    double intercept1 = mid1.y - perpSlope1 * mid1.x;
+    double intercept2 = mid2.y - perpSlope2 * mid2.x;
+
+    double cx = (intercept2 - intercept1) / (perpSlope1 - perpSlope2);
+    double cy = perpSlope1 * cx + intercept1;
+
+    double radius = Point.distance(new Point(cx, cy), p1);
+
+    return new Circle(new Point(cx, cy), radius);
+}
