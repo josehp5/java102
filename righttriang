@@ -45,6 +45,6 @@ public class RightTriangle implements Shape {
     public static boolean similar(RightTriangle triangle1, RightTriangle triangle2) {
         double ratio1 = triangle1.base / triangle2.base;
         double ratio2 = triangle1.height / triangle2.height;
-        return Math.abs(ratio1 - ratio2) < 1e-10; 
+        return Math.abs(ratio1 - ratio2)
     }
 }
